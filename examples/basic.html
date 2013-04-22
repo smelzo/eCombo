@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eCombo jQuery Plugin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../assets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/docs.css" rel="stylesheet">
+    <link href="../assets/prettify.css" rel="stylesheet">
+    <link href="../assets/font-awesome.min.css" rel="stylesheet">
+        
+    <link href="css/style.css" rel="stylesheet">
+        
+    <script type="text/javascript" src="../assets/jquery-1.7.1.min.js"></script>
+    <script src="../assets/bootstrap-222.min.js"></script>
+    <script src="../assets/prettify.min.js"></script>
+    <script src="examples.js"></script>
+    
+    <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
+    <script src="../jquery.ecombo.js"></script>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="marketing">
+            <h1 style="margin-top:0"><i class="icon-cog"></i>&nbsp;eCombo jQuery Plugin</h1>
+            <p class="marketing-byline">
+            Basic use
+            </p>
+        </div>
+  <script type="text/javascript">
+      include('menu.html');
+  </script>     
+        <div class="well">
+            <div class="page-header">
+                <h4>Right placement <small>(default)</small></h4>
+            </div>
+            <select class="eCombo">
+                <option>Value 1</option>
+                <option>Value 2</option>
+                <option>Value 3</option>
+                <option>Value 4</option>
+            </select>
+<pre class="prettyprint  linenums">
+&lt;select class="eCombo"&gt;
+    &lt;option&gt;Value 1&lt;/option&gt;
+    &lt;option&gt;Value 2&lt;/option&gt;
+    &lt;option&gt;Value 3&lt;/option&gt;
+    &lt;option&gt;Value 4&lt;/option&gt;
+&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+    $(function (){
+        $('.eCombo').eCombo({});
+    })
+&lt;/script&gt;
+</pre>
+        </div>
+        
+        <div class="well">
+            <div class="page-header">
+                <h4>Left placement</h4>
+            </div>
+            <select class="eCombo" data-buttons-placement="left">
+                <option>Value 1</option>
+                <option>Value 2</option>
+                <option>Value 3</option>
+                <option>Value 4</option>
+            </select>
+<pre class="prettyprint  linenums">
+&lt;select class="eCombo" data-buttons-placement="left"&gt;
+    &lt;option&gt;Value 1&lt;/option&gt;
+    &lt;option&gt;Value 2&lt;/option&gt;
+    &lt;option&gt;Value 3&lt;/option&gt;
+    &lt;option&gt;Value 4&lt;/option&gt;
+&lt;/select&gt;
+&lt;script type="text/javascript"&gt;
+    $(function (){
+        $('.eCombo').eCombo({});
+    })
+&lt;/script&gt;
+</pre>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(function (){
+            $('.eCombo').eCombo({
+                //save : function (value,callback){
+                //    callback(value);
+                //}
+            });
+        })
+    </script>
+</body>
+</html>

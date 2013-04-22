@@ -1,0 +1,177 @@
+//
+// my mixins
+// --------------------------------------------------
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.unstyled  {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.a-reset {
+    text-decoration:none;
+    color:#000;
+}
+
+.absolute (@width:auto,@height:auto,@top:auto,@left:auto,@right:auto) {
+    position:absolute;
+    width:@width;
+    height:@height;
+    top: @top;
+    bottom:auto;
+    left:@left;
+    right: @right;
+    z-index:1;
+}
+.relative (@width:auto,@height:auto,@top:auto,@left:auto,@right:auto) {
+    position:relative;
+    width:@width;
+    height:@height;
+    top: @top;
+    bottom:auto;
+    left:@left;
+    right: @right;
+    z-index:1;
+}
+.fixed (@width:auto,@height:auto,@top:auto,@left:auto,@right:auto) {
+    position:fixed;
+    width:@width;
+    height:@height;
+    top: @top;
+    bottom:auto;
+    left:@left;
+    right: @right;
+    z-index:1;
+}
+.inline-block {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+.triangle-top (@color:#333,@width:10px){
+   .absolute(0,0);
+   bottom:100%;
+   left:50%;
+    border-bottom: @width solid @color;
+    border-right: @width solid transparent;
+    border-top: @width solid transparent;
+    border-left: @width solid transparent;
+    margin-left: -@width;
+  
+}
+.triangle-left (@color:#333,@width:10px){
+   .absolute(0,0);
+   bottom:50%;
+   right:100%;
+    border-right: @width solid @color;
+    border-left: @width solid transparent;
+    border-top: @width solid transparent;
+    border-bottom: @width solid transparent;
+    margin-left: -@width;
+  
+}
+.radius(@value:6px) {
+	-webkit-border-radius:@value;
+	-moz-border-radius:@value;
+	border-radius:@value;
+}
+
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+/*
+ * Animations
+ * 
+ * Create an awesome animation!
+ * 
+ * This class takes from two to five properties:
+ * -- animation-name [required] - declare your @keyframes animation name. See below
+ * 	for an easy way to make @keyframes!
+ * -- animation-duration [required] - declare how long will it take for an animation
+ * 	to reach end. Value in seconds (s) or milliseconds (ms).
+ * -- timing-function - it's the same property as in transition. Refer to
+ * 	that topic for further explanation.
+ * -- iteration-count - how many times an animation will repeat. It takes integer
+ * 	or "infinite" keyword (for infinite repetition). Default value is 1.
+ * -- direction - indicates whether the animation should play in reverse on
+ * 	alternate cycles. Refer to ->developer.mozilla.org/en/CSS/animation-direction
+ * 	for better explanation. To declare a direction use normal [default value],
+ * 	alternate, reverse or alternate-reverse keyword.
+ * 
+ * Resources:
+ * -- developer.mozilla.org/en/CSS/animation
+ *
+ * Creating @keyframes:
+ * Write in your .less file:
+ * *** @import 'animationX.less';
+ * where X stands for a number between 1 and 5. Then create a class
+ * *** .animationX () {}
+ * and in {} write declarations you normally write in @keyframes.
+ * Then just put an .animation(animationX [other animation properties]) class in your element.
+ * That's all!
+ *
+ * Example:
+ * .toBeAnimated {
+ * 		// Animation with every possible value declared. //
+ *			.animation(animation1 5s linear 3s infinite alternate);
+ *			}
+ * // Importing prefixed @keyframes for animation1.
+ * @import 'animation1';
+ *
+ * // Declaring @keyframes for animation. Only once! 
+ * .animation1() {
+ *			from (margin-top: 3px;)
+ *			to (margin-top: 333px;)
+ *			}
+ *
+ */
+.timing-function (...) {
+  -webkit-animation-timing-function: @arguments;
+  -moz-animation-timing-function: @arguments;
+  -o-animation-timing-function: @arguments;
+  -ms-animation-timing-function: @arguments;
+  animation-timing-function: @arguments;
+}
+.animation (...) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	-o-animation: @arguments;
+	animation: @arguments;
+	}
+.animate (...) {.animation(@arguments);}
+.anime (...) {.animation(@arguments);}
+

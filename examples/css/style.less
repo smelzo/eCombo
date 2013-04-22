@@ -1,0 +1,55 @@
+@import "mixins.less";
+@import "my_mixins.less";
+@import "variables.less";
+.ecombo-wrapper {
+    .clearfix;
+    > button,
+    > input,
+    > select {
+        float: left;
+        margin-bottom: 10px;
+        outline: none;
+    }
+    .ecombo-input {
+        
+    }
+
+    select {
+        option.ecombo-option-add-new {
+            font-weight: bold;
+            color:lighten(@gray,20%);
+            background-color: darken(@white,10%);
+            padding: 10px 0;
+        }
+    }
+    &.ecombo-with-button {
+        .ecombo-edit {
+            .border-radius(0);
+        }
+        &.ecombo-with-button-right {
+            .ecombo-dismiss ,
+            .ecombo-btn {
+                .border-top-left-radius(0);
+                .border-bottom-left-radius(0);
+            }
+            .ecombo-input ,
+            select {
+                .border-top-right-radius(0);
+                .border-bottom-right-radius(0);
+            }
+        }
+        &.ecombo-with-button-left {
+            .ecombo-dismiss ,
+            .ecombo-btn {
+                .border-top-right-radius(0);
+                .border-bottom-right-radius(0);
+            }
+            .ecombo-input ,
+            select {
+                .border-top-left-radius(0);
+                .border-bottom-left-radius(0);
+            }
+        }
+
+    }
+}

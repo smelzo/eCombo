@@ -1,0 +1,175 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.a-reset {
+  text-decoration: none;
+  color: #000;
+}
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Animations
+ * 
+ * Create an awesome animation!
+ * 
+ * This class takes from two to five properties:
+ * -- animation-name [required] - declare your @keyframes animation name. See below
+ * 	for an easy way to make @keyframes!
+ * -- animation-duration [required] - declare how long will it take for an animation
+ * 	to reach end. Value in seconds (s) or milliseconds (ms).
+ * -- timing-function - it's the same property as in transition. Refer to
+ * 	that topic for further explanation.
+ * -- iteration-count - how many times an animation will repeat. It takes integer
+ * 	or "infinite" keyword (for infinite repetition). Default value is 1.
+ * -- direction - indicates whether the animation should play in reverse on
+ * 	alternate cycles. Refer to ->developer.mozilla.org/en/CSS/animation-direction
+ * 	for better explanation. To declare a direction use normal [default value],
+ * 	alternate, reverse or alternate-reverse keyword.
+ * 
+ * Resources:
+ * -- developer.mozilla.org/en/CSS/animation
+ *
+ * Creating @keyframes:
+ * Write in your .less file:
+ * *** @import 'animationX.less';
+ * where X stands for a number between 1 and 5. Then create a class
+ * *** .animationX () {}
+ * and in {} write declarations you normally write in @keyframes.
+ * Then just put an .animation(animationX [other animation properties]) class in your element.
+ * That's all!
+ *
+ * Example:
+ * .toBeAnimated {
+ * 		// Animation with every possible value declared. //
+ *			.animation(animation1 5s linear 3s infinite alternate);
+ *			}
+ * // Importing prefixed @keyframes for animation1.
+ * @import 'animation1';
+ *
+ * // Declaring @keyframes for animation. Only once! 
+ * .animation1() {
+ *			from (margin-top: 3px;)
+ *			to (margin-top: 333px;)
+ *			}
+ *
+ */
+.ecombo-wrapper {
+  *zoom: 1;
+  *zoom: 1;
+}
+.ecombo-wrapper:before,
+.ecombo-wrapper:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.ecombo-wrapper:after {
+  clear: both;
+}
+.ecombo-wrapper:before,
+.ecombo-wrapper:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.ecombo-wrapper:after {
+  clear: both;
+}
+.ecombo-wrapper > button,
+.ecombo-wrapper > input,
+.ecombo-wrapper > select {
+  float: left;
+  margin-bottom: 10px;
+  outline: none;
+}
+.ecombo-wrapper select option.ecombo-option-add-new {
+  font-weight: bold;
+  color: #888888;
+  background-color: #e6e6e6;
+  padding: 10px 0;
+}
+.ecombo-wrapper.ecombo-with-button .ecombo-edit {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-right .ecombo-dismiss,
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-right .ecombo-btn {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+}
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-right .ecombo-input,
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-right select {
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+}
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-left .ecombo-dismiss,
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-left .ecombo-btn {
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+}
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-left .ecombo-input,
+.ecombo-wrapper.ecombo-with-button.ecombo-with-button-left select {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+}
